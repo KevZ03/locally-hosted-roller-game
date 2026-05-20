@@ -3,7 +3,6 @@ from PySide2.QtCore import Qt, QTimer, QThread, Signal
 from PySide2.QtGui import QMovie, QFont, QFontDatabase
 
 from game_ui import Ui_MainWindow  # Import the generated UI file
-from volumeMixer import set_volume
 
 import os, time
 import sys
@@ -536,7 +535,6 @@ class MainWindow(QMainWindow):
     def VolumeSliderMove(self):
         value = int(self.ui.volume_slider_general.value()) / 100
         #print(value)
-        set_volume(value)
 
     def SwitchPageHowToPlay(self):
         self.ui.Content.setCurrentIndex(3)
